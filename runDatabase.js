@@ -10,6 +10,9 @@ const runDatabase = () => {
       db.run("CREATE TABLE user (username TEXT, password TEXT, name TEXT)");
       db.run("INSERT INTO user VALUES ('admin', 'admin123', 'App Administrator')");
       db.run(`INSERT INTO user VALUES ('admin1', '${hash}', 'App Administrator')`);
+      db.run("CREATE TABLE data (name TEXT, description TEXT)");
+      db.run("INSERT INTO data VALUES ('data', 'demo data 1')");
+      db.run("INSERT INTO data VALUES ('data1', 'demo data 2')");
     });
   });
   return { db }

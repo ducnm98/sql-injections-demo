@@ -22,6 +22,7 @@ router.post("/", function(req, res, next) {
     } else if (!row) {
       res.redirect("/login#unauthorized");
     } else {
+      console.log(row)
       res.send(
         "Hello <b>" +
           row.name +

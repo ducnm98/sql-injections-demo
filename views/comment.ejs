@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Demo add comment</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <form action="/add" method="POST">
+      Name: <input name="name" /><br />
+      Description: <input name="description" /><br />
+      <button type="submit">Submit</button>
+
+      <table>
+        <tr>
+          <th>Name</th>
+          <th>Description</th>
+        </tr>
+        <% row.map(i => { %>
+          <tr>
+            <th><%- i.name %></th>
+            <th><%- i.description %></th>
+          </tr>
+        <% }) %>
+      </table>
+    </form>
+  </body>
+</html>
